@@ -23,33 +23,25 @@ package ru.sokomishalov.skraper.internal.number
  */
 
 @PublishedApi
-internal inline operator fun Double?.div(other: Double?): Double? {
-    return when {
-        this != null && other != null -> this / other
-        else -> null
-    }
+internal inline operator fun Double?.div(other: Double?): Double? = when {
+    this != null && other != null -> this / other
+    else -> null
 }
 
 @PublishedApi
-internal inline operator fun Int?.div(other: Int?): Double? {
-    return when {
-        this != null && other != null -> this.toDouble() / other.toDouble()
-        else -> null
-    }
+internal inline operator fun Int?.div(other: Int?): Double? = when {
+    this != null && other != null -> this.toDouble() / other.toDouble()
+    else -> null
 }
 
 @PublishedApi
-internal inline operator fun Double?.minus(other: Double?): Double? {
-    return when {
-        this != null && other != null -> this - other
-        else -> null
-    }
+internal inline operator fun Double?.minus(other: Double?): Double? = when {
+    this != null && other != null -> this - other
+    else -> null
 }
 
 @PublishedApi
-internal inline operator fun Int?.minus(other: Int?): Int? {
-    return when {
-        this != null && other != null -> this - other
-        else -> null
-    }
+internal inline operator fun Int?.minus(other: Int?): Int? = when {
+    this != null && other != null -> this - other
+    else -> null
 }

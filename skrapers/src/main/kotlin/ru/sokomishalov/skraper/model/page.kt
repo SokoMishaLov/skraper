@@ -28,9 +28,9 @@ data class PageInfo(
     val nick: String? = null,
     val name: String? = nick,
     val description: String? = null,
-    val statistics: PageStatistics = PageStatistics(),
+    val statistics: PageStatistics? = null,
     val avatar: Image? = null,
-    val cover: Image? = null
+    val cover: Image? = null,
 )
 
 

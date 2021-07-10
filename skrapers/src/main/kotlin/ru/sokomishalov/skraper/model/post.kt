@@ -21,6 +21,7 @@ import java.time.Instant
  * Represents a provider some user/community/channel/topic/trend post.
  * @property id provider's internal post id
  * @property text title and/or description
+ * @property author post author
  * @property publishedAt publish timestamp
  * @property statistics page stats
  * @property media post media items
@@ -28,9 +29,10 @@ import java.time.Instant
 data class Post(
     val id: String,
     val text: String? = "",
+    val author: PageInfo? = null,
     val publishedAt: Instant? = null,
-    val statistics: PostStatistics = PostStatistics(),
-    val media: List<Media> = emptyList()
+    val statistics: PostStatistics? = null,
+    val media: List<Media> = emptyList(),
 )
 
 

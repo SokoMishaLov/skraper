@@ -70,9 +70,9 @@ enum class Serialization(val extension: String) {
                             writeStringField("ID", item.id)
                             writeStringField("Text", item.text)
                             writeStringField("Published at", item.publishedAt?.let { ISO_DATE_TIME.format(it) })
-                            writeStringField("Rating", item.statistics.likes?.toString(10).orEmpty())
-                            writeStringField("Comments count", item.statistics.comments?.toString(10).orEmpty())
-                            writeStringField("Views count", item.statistics.views?.toString(10).orEmpty())
+                            writeStringField("Rating", item.statistics?.likes?.toString(10).orEmpty())
+                            writeStringField("Comments count", item.statistics?.comments?.toString(10).orEmpty())
+                            writeStringField("Views count", item.statistics?.views?.toString(10).orEmpty())
                             writeStringField("Media", item.media.joinToString("   ") { it.url })
                             writeEndObject()
                         }
